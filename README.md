@@ -1,5 +1,8 @@
 # Marker
 
+## Marker Fork for Python3
+This fork is mainly to update the marker to use by default python3. 
+
 ![marker](https://cloud.githubusercontent.com/assets/2557967/14209204/d99db934-f81a-11e5-910c-9d34ac155d18.gif)
 
 Marker is a command palette for the terminal. It lets you bookmark commands (or commands templates) and easily retreive them with the help of a real-time fuzzy matcher.
@@ -21,7 +24,7 @@ It's also shipped with many commands common usage(Thanks to [tldr](https://githu
 You can customize key binding using environment variables, respectively with ```MARKER_KEY_GET```, ```MARKER_KEY_MARK``` and ```MARKER_KEY_NEXT_PLACEHOLDER```.
 
 ## Requirements
-- python (2.7+ or 3.0+)
+- python (3.0+)
 - Bash-4.3+ or Zshell.
 - Linux Or OSX
 
@@ -30,7 +33,7 @@ In OSX, it seems like Bash 3.x is the default shell which is not supported. you 
 
 ## Installation
 
-`git clone --depth=1 https://github.com/pindexis/marker ~/.marker && ~/.marker/install.py`
+`git clone --depth=1 https://github.com/dawidstencel/marker_python3 ~/.marker && ~/.marker/install.py`
 
 ## License
 [MIT](LICENSE)

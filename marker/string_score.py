@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 # stringslipper.py: Quicksilver-like string scoring.
 # Copyright (C) 2010 Yesudeep Mangalapilly <yesudeep@gmail.com>
