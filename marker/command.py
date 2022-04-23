@@ -44,7 +44,12 @@ class Command(object):
     @staticmethod
     def deserialize(str):
         if "##" in str:
-            cmd, alias = str.split("##")
+            if len(str.split("##")) > 2:
+                tmp = str.split("##")
+                cmd = tmp[0] + tmp[1]
+                alias = tmp[2]
+            else:
+                cmd, alias = str.split("##")
         else:
             cmd = str
             alias = ""
