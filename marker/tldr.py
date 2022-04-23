@@ -32,11 +32,10 @@ def process(path: str):
                     temp = f"{cmd}##{txt}\n"
                     txt = ""
                     cmd = ""
-                    print(temp)
                     lines.append(temp)
-        with open(f"../{path}.txt", "w+") as file:
+        with open(f"{path}.txt", "w+") as file:
             file.writelines(lines)
-    subprocess.run(["cp", f"{path}.txt", "tldr/"])
+    subprocess.run(["cp", f"{path}.txt", "tldr"])
     subprocess.run(["rm", f"{path}.txt"])
 
 def cleanup():
