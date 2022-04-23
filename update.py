@@ -16,7 +16,7 @@ def download():
 
 
 def process(path: str):
-    lines = set()
+    lines = []
     txt = ""
     cmd = ""
     for file in glob.glob(f"pages/{path}/*.md"):
@@ -25,7 +25,7 @@ def process(path: str):
                 if line == "\n" or line.startswith("#") or line.startswith(">"):
                     continue
                 if line.startswith("-") and not line.startswith("--"):
-                    txt = line.replace("\n", "")
+                    txt = line.replace("\n", "").replace(":", "").replace("- ", "")
                 elif line.startswith("`"):
                     cmd = line.replace("`", "").replace("\n", "")
                 else:
@@ -35,10 +35,11 @@ def process(path: str):
                     txt = ""
                     cmd = ""
                     print(temp)
-                    lines.add(temp)
+                    lines.append(temp)
         with open(f"{path}.txt", "w+") as file:
             file.writelines(lines)
     subprocess.run(["cp", f"{path}.txt", "tldr/"])
+    subprocess.run(["rm", f"{path}.txt"])
 
 def cleanup():
     subprocess.run(["rm", "-rfd", "pages/"])

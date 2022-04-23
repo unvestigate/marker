@@ -1,538 +1,538 @@
-open -b {{com.domain.application}}##- Run a graphical macOS app based on the bundle identifier (refer to `osascript` for an easy way to get this):
-top##- Start top, all options are available in the interface:
-dark-mode off##- Turn dark mode off:
-fsck -fy {{/dev/sdX}}##- Check filesystem `/dev/sdX` only if it is clean, reporting any damaged blocks and automatically repairing them:
-xcodebuild -target {{target_name}} -configuration {{configuration_name}} clean build SYMROOT={{SYMROOT_path}}##- Build project:
-as -I {{path/to/directory}} {{file.s}}##- Include a given path to the list of directories to search for files specified in `.include` directives:
-md5 {{filename}}##- Calculate the MD5 checksum for a file:
-yabai -m config window_gap {{10}}##- Set the window gap to 10pt:
-screencapture -v {{path/to/file.mp4}}##- Make a screen recording and save it to a file:
-bc --mathlib --expression='{{s|c|a|l|e}}({{1}})'##- Calculate a sine/cosine/arctangent/natural logarithm/exponential function using `mathlib`:
-scutil --get HostName##- Get hostname:
-nettop -h##- Display help:
-fsck -q {{/dev/sdX}}##- Check filesystem `/dev/sdX`, reporting whether it has been cleanly unmounted:
-shortcuts run "{{Count holidays}}"##- Run the specified shortcut (`Count holidays`):
-afinfo --help##- Display help for full usage:
-caffeinate -i##- Prevent from sleeping until you type Ctrl-C:
-dot_clean -m {{path/to/directory}}##- Merge and delete all `._*` files:
-open .##- Open the current directory in Finder:
-scutil --set HostName {{hostname}}##- Set hostname:
-bless --mount {{/Volumes/Mac OS}} --setBoot##- Set a volume containing either Mac OS 9 and Mac OS X to be the active volume:
-dark-mode status##- Check if dark mode is on:
-head -n {{count_of_lines}} {{filename}}##- Output the first few lines of a file:
-sips --deleteProperty profile --deleteColorManagementProperties {{path/to/image.ext}}##- Remove ColorSync ICC profile from an image:
-afplay --rate {{2}} {{path/to/file}}##- Play a sound file at 2x speed (playback rate):
-carthage build {{dependency}}##- Rebuild a specific dependency:
-SafeEjectGPU gpus##- List all GPUs attached:
-secd##- Start the daemon:
-stat {{file}}##- Show file properties such as size, permissions, creation and access dates among others:
-archey --nocolor##- Show system information without colored output:
-shuf {{filename}}##- Randomize the order of lines in a file and output the result:
-sysctl -n machdep.cpu.features##- Show available CPU features (MMX, SSE, SSE2, SSE3, AES, etc):
-locate */{{filename}}##- Look for a file by its exact filename (a pattern containing no globbing characters is interpreted as `*pattern*`):
-osascript -e "{{say 'Hello'}}" -e "{{say 'world'}}"##- Run multiple AppleScript commands:
-uname##- Print kernel name:
-notifyd -d##- Log debug messages to the default log file (`/var/log/notifyd.log`):
-SafeEjectGPU Eject##- Eject all GPUs:
-whence -v "{{command}}"##- Display type of {{command}}, with location if defined as a function, or binary (equivalent to the `type` and `command -V` builtins):
-diskutil repairVolume {{/dev/diskX}}##- Repair the filesystem data structures of a volume:
-afinfo --info {{path/to/file}}##- Print metadata info and contents of the audio file's InfoDictionary:
-shortcuts list --folders##- Print all shortcut folders:
-sw_vers##- Print all available information (OS name, version number, and build):
-uname -srv##- Print kernel name, kernel release and kernel version:
-plutil -convert {{xml1|binary1|json|swift|objc}} {{path/to/file.plist}} -o -##- Convert a plist file to a different format, writing to stdout:
-{{find .}} | wc##- Use standard input to count lines, words and characters (bytes) in that order:
-mdutil -E {{path/to/volume}}##- Erase the metadata stores and restart the indexing process:
-apachectl stop##- Stop the launchd job:
-sudo fdesetup disable##- Disable FileVault:
-automountd##- Start the daemon:
-sudo reboot##- Reboot immediately:
-sips --out {{path/to/out_dir}}##- Specify an output directory so that originals do not get modified:
-codesign --verify {{path/to/App.app}}##- Verify the certificate of an application:
-lldb -w -n "{{process_name}}"##- Wait for a new process to launch with a given name, and attach to it:
-diskutil list##- List all currently available disks, partitions and mounted volumes:
-xcode-select --install##- Install Xcode's command-line tools:
-sdef {{/Applications/XCode.app}}##- Print the scripting definitions of the given application:
-sudo opensnoop -p {{PID}}##- Track all file opens by a process by PID:
-md5 -s "{{string}}"##- Print a checksum of the given string:
-screencapture -T {{seconds}} {{path/to/file.png}}##- Take a screenshot after a delay:
-defaults write com.apple.Dock expose-animation-duration -float 0.1##- Speed up Mission Control animations:
-security delete-keychain {{path}}##- Delete a specific keychain:
-networksetup -getairportnetwork {{en0}}##- Get currently connected Wi-Fi network name (Wi-Fi device usually en0 or en1):
-sw_vers -productVersion##- Print only the version number of the operating system:
-sed 's/{{find}}/{{replace}}/' {{filename}}##- Replace the first occurrence of a string in a file, and print the result:
-?##- Get help about interactive commands:
-GetFileInfo -c {{path/to/filename}}##- Display the creator of a given file:
-osascript {{path/to/apple.scpt}}##- Run a compiled (`*.scpt`), bundled (`*.scptd`), or plaintext (`*.applescript`) AppleScript file:
-system_profiler -xml > MyReport.spx##- Display a full system profiler report which can be opened by System Profiler.app:
-port search {{search_term}}##- Search for a package:
-xcrun --version##- Display version:
-airport --getinfo##- Show current wireless status information:
-yabai -m config status_bar on##- Enable status bar:
-bless --folder {{/Volumes/Mac OS X/System/Library/CoreServices}} --bootinfo --bootefi##- Bless a volume with only Mac OS X or Darwin, and create the BootX and `boot.efi` files as needed:
-du -h {{path/to/directory}}##- List the sizes of a directory and any subdirectories, in human-readable form (i.e. auto-selecting the appropriate unit for each size):
-wc -w {{path/to/file}}##- Count words in file:
-nfcd##- Start the daemon:
-ocspd##- Start the daemon:
-defaults delete "{{application}}"##- Delete all defaults of an application:
-open -a "{{Application}}"##- Run a graphical macOS application:
-scutil --dns##- Display DNS Configuration:
-ping -c {{count}} "{{host}}"##- Ping a host a specific number of times:
-uname -mp##- Print system architecture and processor information:
-tail -c {{count}} {{path/to/file}}##- Print a specific count of bytes from the end of a given file:
-uuidgen##- Generate a UUID string:
-archey --macports##- Show system information, using MacPorts instead of Homebrew:
-diskutil unmountDisk {{/dev/diskX}}##- Unmount a volume:
-sed -n '{{line_number}},/^$/p' {{filename}}##- Print only text between n-th line till the next empty line:
-xsltproc --output {{output.html}} {{stylesheet.xslt}} {{xmlfile.xml}}##- Transform an XML file with a specific XSLT stylesheet:
-sudo route -t add "{{destination_ip_address}}/24" "{{gateway_address}}"##- Run in test mode (does not do anything, just print):
-bc --expression='scale = {{10}}; {{5 / 3}}'##- Calculate an expression with the specified scale:
-stat -f "%Su %Sg" {{file}}##- Show owner and group of the file:
-istats##- Show all the stats:
-pod update##- Update all currently installed pods to their newest version:
-systemsetup -setsleep off -setrestartpowerfailure on -setrestartfreeze on##- Make the machine never sleep and automatically restart on power failure or kernel panic:
-launchctl list##- Show all loaded agents/daemons, with the PID if the process they specify is currently running, and the exit code returned the last time they ran:
-cal -3##- Display previous, current and next month:
-dot_clean {{path/to/directory}}##- Merge all `._*` files recursively:
-wifi-password##- Get the password for the Wi-Fi you are currently logged onto:
-xctool -project {{YourProject.xcodeproj}} -scheme {{YourScheme}} build##- Build a single project without any workspace:
-SafeEjectGPU gpuid {{GPU_ID}} apps##- List apps using a GPU:
-launchctl stop {{my_script}}##- Manually kill the process associated with a known agent/daemon, if it is running:
-csshX cluster1##- Connect to a pre-defined cluster from `/etc/clusters`:
-airportd##- Start the daemon:
-valet link app-name##- Serve a single site instead of an entire directory:
-sed '/{{line_pattern}}/s/{{find}}/{{replace}}/' {{filename}}##- Replace only on lines matching the line pattern:
-sudo pmset -c displaysleep 0##- Set display to never sleep when on charger power:
-spctl --master-enable##- Turn on Gatekeeper:
-usernoted##- Start the daemon:
-qlmanage -r##- Reset QuickLook:
-xctool -workspace {{YourWorkspace.xcworkspace}} -scheme {{YourScheme}} build##- Build a project that is part of a workspace:
-defaults find "{{keyword}}"##- Search for a keyword in domain names, keys, and values:
-sudo tmutil startbackup##- Start a backup, if one is not running already, and release control of the shell:
-pod update {{pod_name}}##- Update a specific (previously installed) pod to its newest version:
-as {{file.s}} -o {{out.o}}##- Assemble the output to a given file:
-whatis {{first_keyword}} {{second_keyword}}##- Search for information about multiple keywords:
-sudo route add "{{subnet_ip_address}}/24" "{{gateway_address}}"##- Add a route to a /24 subnet through a gateway:
-spotify status##- Show the playback status and song details:
-carthage update##- Download the latest version of all dependencies mentioned in Cartfile, and build them:
-sips --resampleHeightWidthMax {{1920}} {{300}} {{image.ext}}##- Resample image so height and width aren't greater than specified size (notice the capital Z):
-fsck -f {{/dev/sdX}}##- Check filesystem `/dev/sdX` only if it is clean, reporting any damaged blocks and interactively letting the user choose to repair each one:
-plutil -convert xml1 {{file1.plist file2.plist ...}}##- Convert one or more plist files to XML format, overwriting the original files in-place:
-split -b {{512}} {{filename}}##- Split a file with 512 bytes in each split (except the last split; use 512k for kilobytes and 512m for megabytes):
-sudo launchctl load /Library/LaunchDaemons/{{system_daemon}}.plist##- Activate a system-wide daemon to be loaded whenever the system boots up (even if no user logs in):
-sudo nvram {{name}}="{{value}}"##- Modify the value of a firmware variable:
-sudo opensnoop##- Print all file opens as they occur:
-say "{{I like to ride my bike.}}"##- Say a phrase aloud:
-sudo tmutil startbackup -b##- Start a backup and block until the backup is finished:
-mas install {{product_identifier}}##- Install or update an application:
-xcode-select --switch {{path/to/Xcode.app/Contents/Developer}}##- Select a given path as the active developer directory:
-screencapture -C {{path/to/file.png}}##- Take a screenshot including the mouse cursor:
-security add-certificates -k {{keychain.name}} {{path/to/file.pem}}##- Add a certificate from file to a [k]eychain (if -k isn't specified, the default keychain is used):
-lipo {{path/to/binary.x86_64}} {{path/to/binary.arm64e}} -create -output {{path/to/binary}}##- Create a universal file from two single-architecture files:
-security create-keychain -p {{password}} {{keychain.name}}##- Create a keychain:
-machine##- Print CPU architecture:
-spotify vol {{up|down|value}}##- Change volume:
-nettop##- Monitor TCP and UDP sockets from all interfaces:
-networkQuality -v##- Test the network quality with verbose output:
-sysctl -w {{section.tunable}}={{value}}##- Set a changeable kernel state variable:
-whence -ca "{{command}}"##- Same as above, but show all occurrences on command path (equivalent to the `where` builtin):
-nettop -m {{tcp}} -t {{loopback}}##- Monitor TCP sockets from Loopback interfaces:
-softwareupdate --install {{update_name}}##- Download and install a specific app:
-du -sh {{path/to/directory}}##- Show the size of a single directory, in human-readable units:
-textutil -cat {{html}} -title "Several Files" -output {{index.html}} *.rtf##- Load all RTF files in the current directory, concatenates their contents, and writes the result out as `index.html` with the HTML title set to "Several Files":
-ping -n "{{host}}"##- Ping `host` without trying to lookup symbolic names for addresses:
-sudo pmset repeat wake MTWRF 09:00:00##- Schedule computer to automatically wake up every weekday at 9 AM:
-sudo fdesetup list##- List current FileVault enabled users:
-icalBuddy eventsFrom:{{start_date}} to:{{end_date}}##- Show events in a time range:
-bless --info --plist##- Gather information about the currently selected volume (as determined by the firmware), suitable for piping to a program capable of parsing Property Lists:
-split -l {{10}} {{filename}}##- Split a file, each split having 10 lines (except the last split):
-xcrun --toolchain {{name}}##- Find a tool for a given toolchain:
-wifi-password -q##- Print only the password as output:
-h##- While running nettop, list interactive commands:
-whence -p "{{command}}"##- Search only the `PATH` for {{command}}, ignoring builtins, aliases or shell functions (equivalent to the `where` command):
-pbpaste > {{file}}##- Write the contents of the clipboard to a file:
-xcode-select --switch {{path/to/Xcode.app}}##- Select a given Xcode instance and use its developer directory as the active one:
-sudo tmutil setdestination {{path/to/disk_mount_point}}##- Set an HFS+ drive as the backup destination:
-duti -x {{ext}}##- Display information about the default application for a given extension:
-xml2man {{path/to/service.mxml}} {{path/to/service.7}}##- Compile an MPGL file to a specific output file:
-pmset displaysleepnow##- Put display to sleep immediately:
-cloudphotod##- Start the daemon:
-sudo asr restore --source {{image_name}}.dmg --target {{path/to/volume}} --noverify##- Skip verification after restoring:
-bc##- Start an interactive session:
-sed 's#{{find}}#{{replace}}#' {{filename}}##- Replace separator `/` by any other character not used in the find or replace patterns, e.g. `#`:
-sudo tmutil setdestination -a {{destination}}##- Append the given destination to the list of destinations:
-w -i##- Show info about logged-in users, sorted by their idle time:
-/sbin/launchd##- Run init:
-cal {{year}}##- Display a calendar for a specific year (4 digits):
-yabai -m config layout {{bsp}}##- Set the layout to bsp:
-softwareupdate --list##- List all available updates:
-pmset -g##- Display the current power management settings:
-duti -d {{uti}}##- Display the default handler for a given UTI:
-wacaw --width {{width}} --height {{height}} {{filename}}##- Take a picture with custom resolution:
-yaa list -i {{path/to/archive.yaa}}##- List the contents of an archive:
-find . -type t -name "*.png" | pbcopy##- Place the results of a command in the clipboard:
-sntpd##- Start the daemon:
-icalBuddy -f -sc eventsToday##- Show a formatted list separated by calendar for all events today:
-plutil -p {{file1.plist file2.plist ...}}##- Display the contents of one or more plist files in human-readable format:
-locate "{{pattern}}"##- Look for pattern in the database. Note: the database is recomputed periodically (usually weekly or daily):
-airport sniff {{1}}##- Sniff wireless traffic on channel 1:
-sudo nvram -xf {{path/to/file.xml}}##- Set a firmware variable from a specific [x]ML [f]ile:
-xattr -d {{com.apple.quarantine}} {{file}}##- Delete an attribute from a given file:
-xcrun --help##- Display help:
-photolibraryd##- Start the daemon:
-sudo pmset -a displaysleep 10 disksleep 10 sleep 30 womp 1##- Restore to system defaults:
-wacaw {{filename}}##- Take a picture from webcam:
-cal -y##- Display a calendar for the current year:
-imgcat {{filename}}##- Display an image on the command-line:
-wacaw --list-devices##- List the devices available:
-pod outdated##- Show the outdated pods (of those currently installed):
-securityd##- Start the daemon:
-stat -x {{file}}##- Same as above but verbose (more similar to Linux's `stat`):
-xed --create {{filename1}}##- Open file(s) in Xcode, create if it doesn't exist:
-tail -f {{path/to/file}}##- Print the last lines of a given file and keep reading file until `Ctrl + C`:
-top -o cpu -O time##- Start top sorting processes first by CPU, then by running time:
-bc {{path/to/script.bc}}##- Execute a script:
-sudo route flush##- Remove all routes:
-say --voice={{voice}} --rate={{words_per_minute}} "{{I'm sorry Dave, I can't let you do that.}}"##- Say a phrase with a custom voice and speech rate:
-chflags {{hidden}} {{path/to/file}}##- Set the `hidden` flag for a file:
-sysctl -n hw.model##- Show Apple model identifier:
-ping "{{hostname}}"##- Ping the specified host:
-drutil burn -noverify -eject -iso9660##- Burn a directory as an ISO9660 filesystem onto a DVD. Don't verify and eject when complete:
-du -h -d {{N}} {{path/to/directory}}##- List the human-readable sizes of a directory and any subdirectories, up to N levels deep:
-ping -i {{seconds}} "{{host}}"##- Ping `host`, specifying the interval in `seconds` between requests (default is 1 second):
-nettop -l {{10}}##- Print 10 samples of network information:
-xattr -w {{attribute_key}} {{attribute_value}} {{file}}##- Write an attribute for a given file:
-nvram -xp##- [p]rint all the variables stored in the NVRAM using [x]ML format:
-fsck {{/dev/sdX}}##- Check filesystem `/dev/sdX`, reporting any damaged blocks:
-shutdown -r now##- Reboot immediately:
-hdiutil info##- List mounted images:
-du -ah {{path/to/directory}}##- List the human-readable sizes of a directory and of all the files and directories within it:
-vpnd -i {{server_id}}##- Run the daemon for a specific server configuration:
-launchctl load ~/Library/LaunchAgents/{{my_script}}.plist##- Activate a user-specific agent to be loaded into `launchd` whenever the user logs in:
-fdesetup status##- Get current FileVault status:
-mdfind "{{query}}"##- Find a file by its content:
-shutdown -h now##- Power off (halt) immediately:
-qlmanage -p {{filename}} {{filename2}}##- Display QuickLook for one or multiple files:
-tail -F {{path/to/file}}##- Keep reading file until `Ctrl + C`, even if the file is inaccessible:
-du -ch {{*/*.jpg}}##- List the human-readable size of all `.jpg` files in subdirectories of the current directory, and show a cumulative total at the end:
-whence -c "{{command}}"##- Same as above, except display content of shell functions instead of location (equivalent to `which` builtin):
-GetFileInfo {{path/to/filename}}##- Display information about a given file:
-look --ignore-case {{prefix}} {{file}}##- Look for lines ignoring case:
-mdfind -name {{file}}##- Find a file by its name:
-timed##- Start the daemon:
-system_profiler SPHardwareDataType|grep "Serial Number (system)" | awk '{ print $4 }'##- Print the system serial number:
-hdiutil attach {{path/to/image_file}}##- Mount an image:
-cal -m {{month}}##- Display a calendar for a specific month (1-12 or name):
-networkQuality -s##- Test the upload and download speeds sequentially instead of in parallel:
-networkQuality -I {{en0}}##- Test a specified network interface:
-icalBuddy -n eventsToday##- Show events later today:
-sudo fdesetup add -usertoadd user1##- Add FileVault enabled user:
-brightness {{0.5}}##- Set the brightness to 50%:
-log stream##- Stream live system logs:
-security set-identity-preference -s {{URL|hostname|service}} -c "{{common_name}}" {{path/to/file.keychain}}##- Set a certificate to use with a website or [s]ervice by its [c]ommon name (fails if several certificates with the same common name exist):
-xcodebuild -workspace {{workspace_name.workspace}} -scheme {{scheme_name}} -configuration {{configuration_name}} clean build SYMROOT={{SYMROOT_path}}##- Build workspace:
-sudo asr restore --source {{image_name}}.dmg --target {{path/to/volume}} --erase##- Erase the target volume before restoring:
-sips --resampleWidth {{960}} {{path/to/images}}##- Resample all images in a directory to fit a width of 960px (honoring aspect ratio):
-sudo tmutil disable##- Disable automatic backups:
-fileicon rm {{path/to/file_or_directory}}##- Remove a custom icon from a specific file or directory:
-mdutil -s {{/}}##- Show the indexing status of the startup volume:
-shutdown -r {{4205101130}}##- Reboot on May 10th 2042 at 11:30 am (Input format: YYMMDDHHMM):
-sudo nvram -d {{name}}##- [d]elete a firmware variable:
-open -R {{path/to/file}}##- Reveal a file in Finder:
-w -h##- Show logged-in users info without a header:
-pod deintegrate {{xcode_project}}##- Remove CocoaPods from a Xcode project:
-yaa archive -d {{path/to/directory}} -o {{path/to/output.yaa}}##- Create an archive from a directory:
-icalBuddy uncompletedTasks##- Show uncompleted tasks:
-m firewall disable##- Disable the firewall:
-archey##- Show system information:
-carthage update --no-build##- Update dependencies, but don't build any of them:
-valet start##- Start the valet daemon:
-sed -i '' '{{line_number}}d' {{filename}}##- [d]elete the line at the specific line number [i]n a file, overwriting the file:
-whatis {{keyword}}##- Search for information about keyword:
-networkQuality##- Test the network quality for the default interface:
-sudo tmutil stopbackup##- Stop a backup:
-systemsetup -settimezone "{{US/Pacific}}" -setnetworktimeserver {{us.pool.ntp.org}} -setusingnetworktime on##- Specify timezone, NTP Server and enable network time:
-screencapture -P##- Take a screenshot and open it in Preview, instead of saving:
-systemsetup -liststartupdisks##- List valid startup disks:
-csrutil enable##- Enable the System Integrity Protection:
-afinfo --xml {{path/to/file}}##- Print output in XML format:
-coreaudiod##- Start the daemon:
-ping -a "{{host}}"##- Ping `host` and ring the bell when a packet is received (if your terminal supports it):
-duti -s {{com.apple.Finder}} "{{ftp}}"##- Set Finder as the default handler for the ftp:// URL scheme:
-sudo scutil --set ComputerName {{computer_name}}##- Set computer name:
-date +%c##- Display the current date using the default locale's format:
-sudo tmutil enable##- Enable automatic backups:
-codesign --sign "{{My Company Name}}" {{path/to/App.app}}##- Sign an application with a certificate:
-wc -c {{path/to/file}}##- Count characters (bytes) in file:
-spotify pause##- Pause (or resume) playback:
-vpnd##- Start the daemon:
-tail -n {{count}} -s {{seconds}} -f {{path/to/file}}##- Show last 'count' lines in 'file' and refresh every 'seconds' seconds:
-defaults read -app "{{application}}" "{{option}}"##- Read default values for an application option:
-xsltproc --output {{output.html}} --stringparam "{{name}}" "{{value}}" {{stylesheet.xslt}} {{xmlfile.xml}}##- Pass a value to a parameter in the stylesheet:
-duti -l {{uti}}##- Display all handlers of a given UTI:
-afplay {{path/to/file}}##- Play a sound file (waits until playback ends):
-mdutil -i {{on|off}} {{path/to/volume}}##- Turn on/off the Spotlight indexing for a given volume:
-xattr -rd {{attribute_key}} {{directory}}##- Recursively delete an attribute in a given directory:
-sips --resampleHeightWidth {{1920}} {{300}} {{image.ext}}##- Resample image at specified size, Image aspect ratio may be altered:
-ncal -e {{year}}##- Display date of Easter (Western Christian churches) in a given year:
-m bluetooth off##- Turn off Bluetooth:
-mkfile -n {{4m}} {{first_filename}} {{second_filename}}##- Create two files of 4 megabytes each:
-system_profiler SPHardwareDataType##- Display a hardware overview (Model, CPU, Memory, Serial, etc):
-mkfile -n {{15k}} {{filename}}##- Create an empty file of 15 kilobytes:
-nettop -P##- Display a per-process summary:
-sntpd -z {{path/to/state.bin}}##- Use a custom file for the SNTP state:
-scutil --proxy##- Display proxy configuration:
-spotify play list {{playlist_name}}##- Find a playlist by name and play it:
-shutdown -h {{1300}}##- Power off (halt) at 1:00 pm (Uses 24h clock):
-dot_clean -s {{path/to/directory}}##- Follow symlinks:
-shortcuts list##- Print all shortcuts:
-csshX {{user@hostname1}} {{user@hostname2}} --ssh_args "-i {{path/to/ssh_key.pem}}"##- Connect to multiple hosts with a given SSH key:
-duti -s {{org.videolan.vlc}} {{m4v}} viewer##- Set VLC as the default viewer for files with `.m4v` extensions:
-pbcopy < {{file}}##- Place the contents of a file in the clipboard:
-yabai -m config window_shadow off##- Disable window shadow:
-whence "{{command}}"##- Interpret {{command}}, with expansion if defined as an `alias` (similar to the `command -v` builtin):
-as -f {{file.s}}##- Generate output faster by skipping whitespace and comment preprocessing. (Should only be used for trusted compilers):
-cfprefsd##- Start the daemon:
-launchctl start {{my_script}}##- Manually run a known (loaded) agent/daemon, even if it is not the right time (note: this command uses the agent's label, rather than the filename):
-log show --predicate "process == '{{process_name}}'"##- Show logs sent to syslog from a process with a specific name:
-wc -l {{path/to/file}}##- Count lines in file:
-sed -e 's/{{find}}/{{replace}}/' -e 's/{{find}}/{{replace}}/' {{filename}}##- Apply multiple find-replace expressions to a file:
-spotify next##- Skip to the next song in a playlist:
-xml2man {{path/to/command.mxml}}##- Compile an MPGL file to a viewable man page:
-sudo port uninstall inactive##- Remove old versions of installed packages:
-say --voice="?"##- List the available voices:
-dmesg | less##- Show kernel messages 1 page at a time:
-automountd -v##- Log more details to `syslog`:
-spctl --master-disable##- Turn off Gatekeeper:
-pkgutil --pkgs##- List package IDs for all installed packages:
-duti -s {{com.apple.Safari}} {{public.html}} all##- Set Safari as the default handler for HTML documents:
-nvram -p##- [p]rint all the variables stored in the NVRAM:
-sntpd -L##- Overwrite existing state with the local clock (stratum 1), for running a master/primary server, without synchronizing with another (higher stratum) server:
-date -u +%Y-%m-%dT%H:%M:%SZ##- Display the current date in UTC and ISO 8601 format:
-sudo launchctl load /Library/LaunchAgents/{{root_script}}.plist##- Activate an agent which requires root privileges to run and/or should be loaded whenever any user logs in (note the absence of `~` in the path):
-systemsetup -setstartupdisk {{path}}##- Specify a new startup disk:
-shortcuts view "{{Count holidays}}"##- Open the specified shortcut (`Count holidays`) in the Shortcuts editor:
-lipo {{path/to/binary}} -detailed_info##- Display detailed information about a universal file:
-arch -x86_64 "{{command}}"##- Run a command using x86_64:
-scutil --get ComputerName##- Get computer name:
-sudo route add "{{destination_ip_address}}" "{{gateway_address}}"##- Add a route to a destination through a gateway:
-shuf --input-range={{1-10}}##- Generate random numbers in range 1-10:
-avbdeviced##- Start the daemon:
-textutil -convert {{rtf}} -font {{Times}} -fontsize {{10}} {{foo.txt}}##- Convert `foo.txt` into `foo.rtf`, using Times 10 for the font:
-coreauthd##- Start the agent:
-sudo fdesetup enable##- Enable FileVault:
-shuf --head-count={{5}} {{filename}}##- Only output the first 5 entries of the result:
-xcrun --sdk {{sdk_name}}##- Find a tool for a given SDK:
-yaa extract -i {{path/to/archive.yaa}}##- Extract an archive to the current directory:
-dd if={{file.iso}} of=/dev/{{usb_drive}}##- Make a bootable USB drive from an isohybrid file (such like `archlinux-xxx.iso`):
-stat -f %Mp%Lp {{file}}##- Show only octal file permissions:
-defaults write "{{application}}" "{{option}}" {{-type}} {{value}}##- Write the default value of an application option:
-pod init##- Create a Podfile for the current project with the default contents:
-sudo nvram -c##- [c]lear all the firmware variables:
-pbpaste | grep foo##- Use the contents of the clipboard as input to a command:
-security list-keychains##- List the available keychains:
-sudo asr restore --source {{path/to/volume}} --target {{path/to/cloned_volume}}##- Clone volumes without the use of an intermediate disk image:
-say --output-file={{filename.aiff}} "{{Here's to the Crazy Ones.}}"##- Create an audio file of the spoken text:
-networksetup -listallnetworkservices##- List available network service providers (Ethernet, Wi-Fi, Bluetooth, etc):
-plutil -convert binary1 {{file1.plist file2.plist ...}}##- Convert one or more plist files to binary format, overwriting the original files in-place:
-uname -n##- Print system hostname:
-systemsetup -setremotelogin on##- Enable remote login (SSH):
-xcrun {{tool}} {{arguments}} --verbose##- Show verbose output:
-wifi-password {{ssid}}##- Get the password for the Wi-Fi with a specific SSID:
-plutil -convert {{xml1|binary1|json|swift|objc}} {{path/to/file.plist}} -o {{path/to/new_file.plist}}##- Convert a plist file to a different format, writing to a new file:
-date +%s##- Display the current date as a Unix timestamp (seconds since the Unix epoch):
-look {{prefix}} {{file}}##- Look for lines which begins with the given prefix:
-pmset -g batt##- Display the current power source and battery levels:
-notifyd##- Start the daemon:
-mkfile -n {{size}}{{b|k|m|g}} {{filename}}##- Create a file of a given size and unit (bytes, KB, MB, GB):
-m battery status##- Get the battery status:
-w##- Show logged-in users info:
-ditto -V {{path/to/source}} {{path/to/destination}}##- Print a line to the Terminal window for every file that's being copied:
-osascript -e "{{say 'Hello world'}}"##- Run an AppleScript command:
-launchctl unload ~/Library/LaunchAgents/{{my_script}}.plist##- Unload a currently loaded agent, e.g. to make changes (note: the plist file is automatically loaded into `launchd` after a reboot and/or logging in):
-pkgutil --check-signature {{path/to/filename.pkg}}##- Verify cryptographic signatures of a package file:
-xattr -l {{file}}##- List key:value extended attributes for a given file:
-carthage bootstrap##- Download and rebuild the current version of dependencies (without updating them):
-caffeinate -u -t {{3600}}##- Prevent from sleeping for 1 hour (3600 seconds):
-fileicon get {{path/to/file_or_directory}}##- Save the custom icon of a file or directory as a `.icns` file into the current directory:
-pod install##- Download and install all pods defined in the Podfile (that haven't been installed before):
-xml2man -f {{path/to/function.mxml}} {{path/to/function.3}}##- Compile an MPGL file to a specific output file, overwriting if it already exists:
-applecamerad##- Start the daemon:
-textutil {{foo.rtf}} -convert {{txt}}##- Convert rich text to normal text:
-echo -n {{base64_text}} | base64 --decode##- Decode from stdin:
-open {{file.ext}}##- Open a file with the associated application:
-apachectl start##- Start the `org.apache.httpd` launchd job:
-bird##- Start the daemon:
-tldr launchctl##- View documentation for interacting with launchd using launchctl:
-emond##- Start the daemon:
-bc --expression='{{5 / 3}}'##- Calculate an expression:
-mdfind -onlyin {{directory}} "{{query}}"##- Find a file containing a string, in a given directory:
-uname -a##- Print all available system information:
-wc -m {{path/to/file}}##- Count characters in file (taking multi-byte character sets into account):
-osascript -l JavaScript {{path/to/script.js}}##- Run a JavaScript file:
-yabai -m config window_opacity on##- Enable opacity:
-hdiutil makehybrid -o {{path/to/output_file}} {{path/to/directory}}##- Create an ISO image from the contents of a directory:
-sudo pmset -b displaysleep 15##- Set display to sleep after 15 minutes when on battery power:
-appsleepd##- Start the daemon:
-dot_clean -n {{path/to/directory}}##- Only delete `._*` files if there's a matching native file:
-csrutil disable##- Disable the System Integrity Protection:
-indent {{path/to/source.c}} {{path/to/indented_source.c}} -nbad -bap -nbc -br -c33 -cd33 -ncdb -ce -ci4 -cli0 -cs -d0 -di1 -nfc1 -nfcb -i4 -nip -l75 -lp -npcs -nprs -npsl -nsc -nsob##- Format C/C++ source according to the style of Kernighan & Ritchie (K&R):
-port installed##- List installed packages:
-textutil -info {{foo.rtf}}##- Display information about `foo.rtf`:
-lipo {{path/to/binary}} -archs##- List all architectures contained in a universal file:
-istats fan##- Show all fan stats:
-screencapture {{path/to/file.png}}##- Take a screenshot and save it to a file:
-shutdown -r "+{{5}}"##- Reboot in 5 minutes:
-shuf {{filename}} --output={{output_filename}}##- Write output to another file:
-afplay --rate {{0.5}} {{path/to/file}}##- Play a sound file at half speed:
-drutil eject##- Eject a disk from the drive:
-date -r 1473305798##- Display a specific date (represented as a Unix timestamp) using the default format:
-vpnd -d##- Run the daemon in the foreground and print logs to the terminal:
-valet paths##- View 'parked' paths:
-bc --mathlib##- Start an interactive session with the standard math library enabled:
-dd if=/dev/zero of={{file_1GB}} bs=1024 count=1000000##- Benchmark the write performance of a disk:
-spctl --list##- List all rules on the system:
-md5 -q {{filename}}##- Output only the md5 checksum (no filename):
-open {{*.ext}}##- Open all the files of a given extension in the current directory with the associated application:
-lipo {{path/to/binary}} -thin {{arm64e}} -output {{path/to/binary.arm64e}}##- Extract a single-architecture file from a universal file:
-pkgutil --files {{com.microsoft.Word}}##- List all the files for an installed package given its ID:
-say --input-file={{filename.txt}}##- Read a file aloud:
-icalBuddy -n "tasksDueBefore:today+{{days}}"##- Show tasks for a specified number of days:
-mas search "{{application}}" --price##- Search for an application, displaying the price alongside the results:
-SafeEjectGPU gpuid {{GPU_ID}} status##- Get the status of a GPU:
-uptime##- Print current time, uptime, number of logged-in users and other information:
-head -c {{number_in_bytes}} {{filename}}##- Output the first few bytes of a file:
-brightness -l##- Show current brightness:
-ping --apple-time "{{host}}"##- Ping `host` and prints the time a packet was received (this option is an Apple addition):
-fileicon set {{path/to/file_or_directory}} {{path/to/icon.png}}##- Set a custom icon for a specific file or directory:
-lldb -p {{pid}}##- Attach `lldb` to a running process with a given PID:
-caffeinate -s "{{command}}"##- Prevent from sleeping until a command completes:
-apachectl restart##- Stop, then start launchd job:
-cal##- Display a calendar for the current month:
-nettop -d -s {{5}}##- Monitor changes every 5 seconds:
-airport --scan##- Scan for available wireless networks:
-distnoted##- Start the daemon:
-spotify play {{song_name}}##- Find a song by name and play it:
-m dock autohide YES##- Enable Dock's auto hide feature:
-pkgutil --expand-full {{path/to/filename.pkg}} {{path/to/directory}}##- Extract the contents of a package file into a directory:
-log stream --process {{process_id}}##- Stream logs sent to `syslog` from the process with a specific PID:
-ditto {{path/to/source}} {{path/to/destination}}##- Overwrite contents of destination directory with contents of source directory:
-sips --matchTo "/System/Library/ColorSync/Profiles/Generic RGB Profile.icc" {{path/to/image.ext}} {{path/to/out_dir}}##- Convert an image from CMYK to RGB:
-coreautha##- Start the agent:
-readlink {{path/to/symlink}}##- Print the absolute path which the symlink points to:
-emond -c {{path/to/config}}##- Use a specific configuration file:
-m disk filesystems##- List available filesystems for formatting:
-sudo /usr/libexec/locate.updatedb##- Recompute the database. You need to do it if you want to find recently added files:
-sudo route get "{{destination}}"##- Lookup and display the route for a destination (hostname or IP address):
-top -user {{user_name}}##- Start top displaying only processes owned by given user:
-GetFileInfo -m {{path/to/filename}}##- Display the date and time a given file was last modified:
-filecoordinationd##- Start the daemon:
-stat -f "%z %N" {{file}}##- Show the size of the file in bytes:
-qlmanage {{*.jpg}} -t -s {{300}} {{path/to/directory}}##- Compute 300px wide PNG thumbnails of all JPEGs in the current directory and put them in a directory:
-xcode-select --print-path##- Print the currently selected developer directory:
-sudo xcode-select --reset##- Discard any user-specified developer directory so that it will be found via the default search mechanism:
-valet share##- Share a project via an Ngrok tunnel:
-dmesg##- Show kernel messages:
-vpnd -h##- Print usage summary and exit:
-lldb "{{executable}}"##- Debug an executable:
-defaults read "{{application}}" "{{option}}"##- Read system defaults for an application option:
-sudo opensnoop -n "{{process_name}}"##- Track all file opens by a process by name:
-xed {{file1}}##- Open file in Xcode:
-nettop -p "{{process_id|process_name}}"##- Monitor a specific process:
-sudo opensnoop -f {{path/to/file}}##- Track which processes open a specified file:
-yaa archive -a {{algorithm}} -d {{path/to/directory}} -o {{path/to/output.yaa}}##- Create an archive with a specific compression algorithm:
-base64 --input={{plain_file}}##- Encode a file:
-split -p {{cat|^[dh]og}} {{filename}}##- Split a file by a regular expression. The matching line will be the first line of the next output file:
-GetFileInfo -d {{path/to/filename}}##- Display the date and time a given file was created:
-SafeEjectGPU gpuid {{GPU_ID}} LaunchOnGPU {{path/to/App.app}}##- Launch an app on a GPU:
-afplay --time {{seconds}} {{path/to/file}}##- Play the first N seconds of a sound file:
-sed -i '' 's/{{find}}/{{replace}}/g' {{filename}}##- Replace all occurrences of a string [i]n a file, overwriting the file (i.e. in-place):
-xip --expand {{path/to/file.xip}}##- Expand the archive into the current working directory:
-base64 --decode --input={{base64_file}}##- Decode a file:
-dark-mode##- Toggle dark mode (turn it on if it's currently off, off if it's currently on):
-dot_clean -v {{path/to/directory}}##- Print verbose output:
-emond -r {{path/to/file_or_directory}}##- Specify rules for emond to process by giving a path to a file or directory:
-SafeEjectGPU gpuid {{GPU_ID}} Eject##- Eject a GPU:
-vpnd -n##- Run the daemon in the foreground, print logs to the terminal, and quit after validating arguments:
-softwareupdate --install --req##- Download and install all recommended updates:
-diskutil eject {{/dev/disk1}}##- Eject a CD/DVD (unmount first):
-mdutil -a -i {{on|off}}##- Turn on/off indexing for all volumes:
-ditto -rsrc {{path/to/source}} {{path/to/destination}}##- Copy a given file or directory, while retaining the original file permissions:
-dot_clean -f {{path/to/directory}}##- Don't recursively merge all `._*` in a directory (flat merge):
-csshX {{hostname1}} {{hostname2}}##- Connect to multiple hosts:
-chflags {{nohidden}} {{path/to/file}}##- Unset the `hidden` flag for a file:
-sudo airport --disassociate##- Disassociate from current airport network:
-csrutil netboot add {{ip_address}}##- Add an IPv4 address to the list of allowed NetBoot sources:
-pod list##- List all available pods:
-valet park##- Register the current working directory as a path that Valet should search for sites:
-hdiutil detach /Volumes/{{volume_name}}##- Unmount an image:
-notifyd -d -log_file {{path/to/log}}##- Log debug messages to an alternate log file:
-bless --netboot --server {{bsdp://255.255.255.255}}##- Set the system to NetBoot and broadcast for an available server:
-sudo port install {{package_name}}##- Install a package:
-yaa archive -b {{8m}} -d {{path/to/directory}} -o {{path/to/output.yaa}}##- Create an archive with an 8 MB block size:
-xctool -workspace {{YourWorkspace.xcworkspace}} -scheme {{YourScheme}} clean build test##- Clean, build and execute all the tests:
-dd if=/dev/urandom of={{random_file}} bs=100 count=1##- Generate a file of 100 random bytes by using kernel random driver:
-mdls -name {{attribute}} {{path/to/file}}##- Display a specific metadata attribute:
-rename 's/{{from}}/{{to}}/' {{*.txt}}##- Replace `from` with `to` in the filenames of the specified files:
-osascript -l JavaScript -e "{{console.log('Hello world');}}"##- Run a JavaScript command:
-afinfo --warnings {{path/to/file}}##- Print warnings for the audio file if any:
-du -{{k|m|g}} {{path/to/directory}}##- List the sizes of a directory and any subdirectories, in the given unit (KiB/MiB/GiB):
-screencapture -i {{path/to/file.png}}##- Take a screenshot of a selected rectangular area:
-osascript -e 'id of app "{{Application}}"'##- Get the bundle identifier of an application (useful for `open -b`):
-csrutil netboot list##- Display the list of allowed NetBoot sources:
-sudo tmutil setdestination "{{protocol://user[:password]@host/share}}"##- Set an APF share or SMB share as the backup destination:
-chflags -R {{uchg}} {{path/to/directory}}##- Recursively set the `uchg` flag for a directory:
-archey --offline##- Show system information without IP address check:
-top -o mem##- Start top sorting processes by internal memory size (default order - process ID):
-networksetup -setairportnetwork {{en0}} {{Airport Network SSID}} {{password}}##- Connect to a particular Wi-Fi network:
-afinfo --brief {{path/to/file}}##- Print a one line description of the audio file:
-xcodebuild -showsdks##- Show SDKs:
-cal {{month}} {{year}}##- Display a calendar for a specific month and year:
-networksetup -getinfo "{{Wi-Fi}}"##- Show network settings for a particular networking device:
-chflags -R {{nouchg}} {{path/to/directory}}##- Recursively unset the `uchg` flag for a directory:
-tail -n +{{count}} {{path/to/file}}##- Print a file from a specific line number:
-sudo asr restore --source {{image_name}}.dmg --target {{path/to/volume}}##- Restore a disk image to a target volume:
-tail -n {{count}} {{path/to/file}}##- Show last 'count' lines in file:
-indent {{path/to/source.c}} {{path/to/indented_source.c}} -nbad -nbap -bc -br -c33 -cd33 -cdb -ce -ci4 -cli0 -di16 -fc1 -fcb -i4 -ip -l75 -lp -npcs -nprs -psl -sc -nsob -ts8##- Format C/C++ source according to the Berkeley style:
-dd if=/dev/{{source_drive}} of=/dev/{{dest_drive}} bs=4m conv=noerror##- Clone a drive to another drive with 4 MB block and ignore error:
-shutdown -s now##- Sleep immediately:
-sudo port upgrade outdated##- Upgrade outdated packages:
-wacaw --video {{filename}} --duration {{duration_in_seconds}}##- Record a video:
-dark-mode on##- Turn dark mode on:
-softwareupdate --install --all##- Download and install all updates:
-sed -E 's/{{regular_expression}}/{{replace}}/g' {{filename}}##- Replace all occurrences of an extended regular expression in a file:
-mas upgrade##- Install all pending updates:
-spctl --add --label {{rule_name}} {{path/to/file}}##- Add a rule to allow an application to run (labeling of rule is optional):
-sysctl -n machdep.cpu.brand_string##- Show CPU model:
-universalaccessd##- Start the daemon:
-mdls {{path/to/file}}##- Display the list of metadata attributes for file:
-brightness {{1}}##- Set the brightness to 100%:
-sudo reboot -q##- Reboot immediately without gracefully shutting down:
-afinfo {{path/to/file}}##- Display info of a given audio file:
-as {{file.s}}##- Assemble a file, writing the output to `a.out`:
-fileicon test {{path/to/file_or_directory}}##- Test if a specific file or directory has a custom icon:
-bnepd##- Start the daemon:
-csrutil clear##- Reset the System Integrity Protection status and clear the NetBoot list:
-sudo route delete "{{destination_ip_address}}/24"##- Delete a specific route:
-sw_vers -buildVersion##- Print only the build identifier:
-xcrun {{tool}} {{arguments}}##- Find and run a tool from the active developer directory:
-dmesg | grep -i memory##- Show how much physical memory is available on this system:
-sudo port selfupdate##- Update port and fetch the latest list of available packages:
-carthage update --platform ios##- Update dependencies, but only build for iOS:
-md5 {{filename1}} {{filename2}}##- Calculate MD5 checksums for multiple files:
-yaa archive -i {{path/to/file}} -o {{path/to/output.yaa}}##- Create an archive from a file:
-photoanalysisd##- Start the daemon:
-xattr -c {{file}}##- Delete all extended attributes from a given file:
-sudo log collect --last {{1h}} --output {{path/to/file.logarchive}}##- Export all logs to disk for the past hour:
-mas signin "{{user@example.com}}"##- Sign into the Mac App Store for the first time:
-sysctl -a##- Show all available variables and their values:
-mas list##- Show all installed applications and their product identifiers:
-istats scan##- Scan and print temperatures:
-xed --line 75 {{filename}}##- Open a file in Xcode and jump to line number 75:
-vpnd -x##- Run the daemon in the foreground:
-csrutil status##- Display the System Integrity Protection status:
-arch##- Display the system's architecture:
-istats cpu##- Show all CPU stats:
-textutil -convert {{html}} {{foo.rtf}}##- Convert `foo.rtf` into `foo.html`:
-echo -n "{{plain_text}}" | base64##- Encode from stdin:
-wacaw --to-clipboard##- Copy image just taken to clipboard:
+afinfo {{path/to/file}}##Display info of a given audio file
+afinfo --brief {{path/to/file}}##Print a one line description of the audio file
+afinfo --info {{path/to/file}}##Print metadata info and contents of the audio file's InfoDictionary
+afinfo --xml {{path/to/file}}##Print output in XML format
+afinfo --warnings {{path/to/file}}##Print warnings for the audio file if any
+afinfo --help##Display help for full usage
+afplay {{path/to/file}}##Play a sound file (waits until playback ends)
+afplay --rate {{2}} {{path/to/file}}##Play a sound file at 2x speed (playback rate)
+afplay --rate {{0.5}} {{path/to/file}}##Play a sound file at half speed
+afplay --time {{seconds}} {{path/to/file}}##Play the first N seconds of a sound file
+airport --getinfo##Show current wireless status information
+airport sniff {{1}}##Sniff wireless traffic on channel 1
+airport --scan##Scan for available wireless networks
+sudo airport --disassociate##Disassociate from current airport network
+airportd##Start the daemon
+apachectl start##Start the `org.apache.httpd` launchd job
+apachectl stop##Stop the launchd job
+apachectl restart##Stop, then start launchd job
+applecamerad##Start the daemon
+appsleepd##Start the daemon
+arch##Display the system's architecture
+arch -x86_64 "{{command}}"##Run a command using x86_64
+archey##Show system information
+archey --nocolor##Show system information without colored output
+archey --macports##Show system information, using MacPorts instead of Homebrew
+archey --offline##Show system information without IP address check
+as {{file.s}}##Assemble a file, writing the output to `a.out`
+as {{file.s}} -o {{out.o}}##Assemble the output to a given file
+as -f {{file.s}}##Generate output faster by skipping whitespace and comment preprocessing. (Should only be used for trusted compilers)
+as -I {{path/to/directory}} {{file.s}}##Include a given path to the list of directories to search for files specified in `.include` directives
+sudo asr restore --source {{image_name}}.dmg --target {{path/to/volume}}##Restore a disk image to a target volume
+sudo asr restore --source {{image_name}}.dmg --target {{path/to/volume}} --erase##Erase the target volume before restoring
+sudo asr restore --source {{image_name}}.dmg --target {{path/to/volume}} --noverify##Skip verification after restoring
+sudo asr restore --source {{path/to/volume}} --target {{path/to/cloned_volume}}##Clone volumes without the use of an intermediate disk image
+automountd##Start the daemon
+automountd -v##Log more details to `syslog`
+avbdeviced##Start the daemon
+base64 --input={{plain_file}}##Encode a file
+base64 --decode --input={{base64_file}}##Decode a file
+echo -n "{{plain_text}}" | base64##Encode from stdin
+echo -n {{base64_text}} | base64 --decode##Decode from stdin
+bc##Start an interactive session
+bc --mathlib##Start an interactive session with the standard math library enabled
+bc --expression='{{5 / 3}}'##Calculate an expression
+bc {{path/to/script.bc}}##Execute a script
+bc --expression='scale = {{10}}; {{5 / 3}}'##Calculate an expression with the specified scale
+bc --mathlib --expression='{{s|c|a|l|e}}({{1}})'##Calculate a sine/cosine/arctangent/natural logarithm/exponential function using `mathlib`
+bird##Start the daemon
+bless --folder {{/Volumes/Mac OS X/System/Library/CoreServices}} --bootinfo --bootefi##Bless a volume with only Mac OS X or Darwin, and create the BootX and `boot.efi` files as needed
+bless --mount {{/Volumes/Mac OS}} --setBoot##Set a volume containing either Mac OS 9 and Mac OS X to be the active volume
+bless --netboot --server {{bsdp://255.255.255.255}}##Set the system to NetBoot and broadcast for an available server
+bless --info --plist##Gather information about the currently selected volume (as determined by the firmware), suitable for piping to a program capable of parsing Property Lists
+bnepd##Start the daemon
+brightness -l##Show current brightness
+brightness {{1}}##Set the brightness to 100%
+brightness {{0.5}}##Set the brightness to 50%
+caffeinate -u -t {{3600}}##Prevent from sleeping for 1 hour (3600 seconds)
+caffeinate -s "{{command}}"##Prevent from sleeping until a command completes
+caffeinate -i##Prevent from sleeping until you type Ctrl-C
+cal##Display a calendar for the current month
+cal -3##Display previous, current and next month
+cal -m {{month}}##Display a calendar for a specific month (1-12 or name)
+cal -y##Display a calendar for the current year
+cal {{year}}##Display a calendar for a specific year (4 digits)
+cal {{month}} {{year}}##Display a calendar for a specific month and year
+ncal -e {{year}}##Display date of Easter (Western Christian churches) in a given year
+carthage update##Download the latest version of all dependencies mentioned in Cartfile, and build them
+carthage update --platform ios##Update dependencies, but only build for iOS
+carthage update --no-build##Update dependencies, but don't build any of them
+carthage bootstrap##Download and rebuild the current version of dependencies (without updating them)
+carthage build {{dependency}}##Rebuild a specific dependency
+cfprefsd##Start the daemon
+chflags {{hidden}} {{path/to/file}}##Set the `hidden` flag for a file
+chflags {{nohidden}} {{path/to/file}}##Unset the `hidden` flag for a file
+chflags -R {{uchg}} {{path/to/directory}}##Recursively set the `uchg` flag for a directory
+chflags -R {{nouchg}} {{path/to/directory}}##Recursively unset the `uchg` flag for a directory
+cloudphotod##Start the daemon
+codesign --sign "{{My Company Name}}" {{path/to/App.app}}##Sign an application with a certificate
+codesign --verify {{path/to/App.app}}##Verify the certificate of an application
+coreaudiod##Start the daemon
+coreautha##Start the agent
+coreauthd##Start the agent
+csrutil status##Display the System Integrity Protection status
+csrutil disable##Disable the System Integrity Protection
+csrutil enable##Enable the System Integrity Protection
+csrutil netboot list##Display the list of allowed NetBoot sources
+csrutil netboot add {{ip_address}}##Add an IPv4 address to the list of allowed NetBoot sources
+csrutil clear##Reset the System Integrity Protection status and clear the NetBoot list
+csshX {{hostname1}} {{hostname2}}##Connect to multiple hosts
+csshX {{user@hostname1}} {{user@hostname2}} --ssh_args "-i {{path/to/ssh_key.pem}}"##Connect to multiple hosts with a given SSH key
+csshX cluster1##Connect to a pre-defined cluster from `/etc/clusters`
+dark-mode##Toggle dark mode (turn it on if it's currently off, off if it's currently on)
+dark-mode on##Turn dark mode on
+dark-mode off##Turn dark mode off
+dark-mode status##Check if dark mode is on
+date +%c##Display the current date using the default locale's format
+date -u +%Y-%m-%dT%H:%M:%SZ##Display the current date in UTC and ISO 8601 format
+date +%s##Display the current date as a Unix timestamp (seconds since the Unix epoch)
+date -r 1473305798##Display a specific date (represented as a Unix timestamp) using the default format
+dd if={{file.iso}} of=/dev/{{usb_drive}}##Make a bootable USB drive from an isohybrid file (such like `archlinux-xxx.iso`)
+dd if=/dev/{{source_drive}} of=/dev/{{dest_drive}} bs=4m conv=noerror##Clone a drive to another drive with 4 MB block and ignore error
+dd if=/dev/urandom of={{random_file}} bs=100 count=1##Generate a file of 100 random bytes by using kernel random driver
+dd if=/dev/zero of={{file_1GB}} bs=1024 count=1000000##Benchmark the write performance of a disk
+defaults read "{{application}}" "{{option}}"##Read system defaults for an application option
+defaults read -app "{{application}}" "{{option}}"##Read default values for an application option
+defaults find "{{keyword}}"##Search for a keyword in domain names, keys, and values
+defaults write "{{application}}" "{{option}}" {{-type}} {{value}}##Write the default value of an application option
+defaults write com.apple.Dock expose-animation-duration -float 0.1##Speed up Mission Control animations
+defaults delete "{{application}}"##Delete all defaults of an application
+diskutil list##List all currently available disks, partitions and mounted volumes
+diskutil repairVolume {{/dev/diskX}}##Repair the filesystem data structures of a volume
+diskutil unmountDisk {{/dev/diskX}}##Unmount a volume
+diskutil eject {{/dev/disk1}}##Eject a CD/DVD (unmount first)
+distnoted##Start the daemon
+ditto {{path/to/source}} {{path/to/destination}}##Overwrite contents of destination directory with contents of source directory
+ditto -V {{path/to/source}} {{path/to/destination}}##Print a line to the Terminal window for every file that's being copied
+ditto -rsrc {{path/to/source}} {{path/to/destination}}##Copy a given file or directory, while retaining the original file permissions
+dmesg##Show kernel messages
+dmesg | grep -i memory##Show how much physical memory is available on this system
+dmesg | less##Show kernel messages 1 page at a time
+dot_clean {{path/to/directory}}##Merge all `._*` files recursively
+dot_clean -f {{path/to/directory}}##Don't recursively merge all `._*` in a directory (flat merge)
+dot_clean -m {{path/to/directory}}##Merge and delete all `._*` files
+dot_clean -n {{path/to/directory}}##Only delete `._*` files if there's a matching native file
+dot_clean -s {{path/to/directory}}##Follow symlinks
+dot_clean -v {{path/to/directory}}##Print verbose output
+drutil eject##Eject a disk from the drive
+drutil burn -noverify -eject -iso9660##Burn a directory as an ISO9660 filesystem onto a DVD. Don't verify and eject when complete
+du -{{k|m|g}} {{path/to/directory}}##List the sizes of a directory and any subdirectories, in the given unit (KiB/MiB/GiB)
+du -h {{path/to/directory}}##List the sizes of a directory and any subdirectories, in human-readable form (i.e. auto-selecting the appropriate unit for each size)
+du -sh {{path/to/directory}}##Show the size of a single directory, in human-readable units
+du -ah {{path/to/directory}}##List the human-readable sizes of a directory and of all the files and directories within it
+du -h -d {{N}} {{path/to/directory}}##List the human-readable sizes of a directory and any subdirectories, up to N levels deep
+du -ch {{*/*.jpg}}##List the human-readable size of all `.jpg` files in subdirectories of the current directory, and show a cumulative total at the end
+duti -s {{com.apple.Safari}} {{public.html}} all##Set Safari as the default handler for HTML documents
+duti -s {{org.videolan.vlc}} {{m4v}} viewer##Set VLC as the default viewer for files with `.m4v` extensions
+duti -s {{com.apple.Finder}} "{{ftp}}"##Set Finder as the default handler for the ftp// URL scheme
+duti -x {{ext}}##Display information about the default application for a given extension
+duti -d {{uti}}##Display the default handler for a given UTI
+duti -l {{uti}}##Display all handlers of a given UTI
+emond##Start the daemon
+emond -r {{path/to/file_or_directory}}##Specify rules for emond to process by giving a path to a file or directory
+emond -c {{path/to/config}}##Use a specific configuration file
+sudo fdesetup list##List current FileVault enabled users
+fdesetup status##Get current FileVault status
+sudo fdesetup add -usertoadd user1##Add FileVault enabled user
+sudo fdesetup enable##Enable FileVault
+sudo fdesetup disable##Disable FileVault
+filecoordinationd##Start the daemon
+fileicon set {{path/to/file_or_directory}} {{path/to/icon.png}}##Set a custom icon for a specific file or directory
+fileicon rm {{path/to/file_or_directory}}##Remove a custom icon from a specific file or directory
+fileicon get {{path/to/file_or_directory}}##Save the custom icon of a file or directory as a `.icns` file into the current directory
+fileicon test {{path/to/file_or_directory}}##Test if a specific file or directory has a custom icon
+fsck {{/dev/sdX}}##Check filesystem `/dev/sdX`, reporting any damaged blocks
+fsck -f {{/dev/sdX}}##Check filesystem `/dev/sdX` only if it is clean, reporting any damaged blocks and interactively letting the user choose to repair each one
+fsck -fy {{/dev/sdX}}##Check filesystem `/dev/sdX` only if it is clean, reporting any damaged blocks and automatically repairing them
+fsck -q {{/dev/sdX}}##Check filesystem `/dev/sdX`, reporting whether it has been cleanly unmounted
+GetFileInfo {{path/to/filename}}##Display information about a given file
+GetFileInfo -d {{path/to/filename}}##Display the date and time a given file was created
+GetFileInfo -m {{path/to/filename}}##Display the date and time a given file was last modified
+GetFileInfo -c {{path/to/filename}}##Display the creator of a given file
+hdiutil attach {{path/to/image_file}}##Mount an image
+hdiutil detach /Volumes/{{volume_name}}##Unmount an image
+hdiutil info##List mounted images
+hdiutil makehybrid -o {{path/to/output_file}} {{path/to/directory}}##Create an ISO image from the contents of a directory
+head -n {{count_of_lines}} {{filename}}##Output the first few lines of a file
+head -c {{number_in_bytes}} {{filename}}##Output the first few bytes of a file
+icalBuddy -n eventsToday##Show events later today
+icalBuddy uncompletedTasks##Show uncompleted tasks
+icalBuddy -f -sc eventsToday##Show a formatted list separated by calendar for all events today
+icalBuddy -n "tasksDueBefore:today+{{days}}"##Show tasks for a specified number of days
+icalBuddy eventsFrom:{{start_date}} to:{{end_date}}##Show events in a time range
+imgcat {{filename}}##Display an image on the command-line
+indent {{path/to/source.c}} {{path/to/indented_source.c}} -nbad -nbap -bc -br -c33 -cd33 -cdb -ce -ci4 -cli0 -di16 -fc1 -fcb -i4 -ip -l75 -lp -npcs -nprs -psl -sc -nsob -ts8##Format C/C++ source according to the Berkeley style
+indent {{path/to/source.c}} {{path/to/indented_source.c}} -nbad -bap -nbc -br -c33 -cd33 -ncdb -ce -ci4 -cli0 -cs -d0 -di1 -nfc1 -nfcb -i4 -nip -l75 -lp -npcs -nprs -npsl -nsc -nsob##Format C/C++ source according to the style of Kernighan & Ritchie (K&R)
+istats##Show all the stats
+istats cpu##Show all CPU stats
+istats fan##Show all fan stats
+istats scan##Scan and print temperatures
+launchctl load ~/Library/LaunchAgents/{{my_script}}.plist##Activate a user-specific agent to be loaded into `launchd` whenever the user logs in
+sudo launchctl load /Library/LaunchAgents/{{root_script}}.plist##Activate an agent which requires root privileges to run and/or should be loaded whenever any user logs in (note the absence of `~` in the path)
+sudo launchctl load /Library/LaunchDaemons/{{system_daemon}}.plist##Activate a system-wide daemon to be loaded whenever the system boots up (even if no user logs in)
+launchctl list##Show all loaded agents/daemons, with the PID if the process they specify is currently running, and the exit code returned the last time they ran
+launchctl unload ~/Library/LaunchAgents/{{my_script}}.plist##Unload a currently loaded agent, e.g. to make changes (note the plist file is automatically loaded into `launchd` after a reboot and/or logging in)
+launchctl start {{my_script}}##Manually run a known (loaded) agent/daemon, even if it is not the right time (note this command uses the agent's label, rather than the filename)
+launchctl stop {{my_script}}##Manually kill the process associated with a known agent/daemon, if it is running
+/sbin/launchd##Run init
+tldr launchctl##View documentation for interacting with launchd using launchctl
+lipo {{path/to/binary.x86_64}} {{path/to/binary.arm64e}} -create -output {{path/to/binary}}##Create a universal file from two single-architecture files
+lipo {{path/to/binary}} -archs##List all architectures contained in a universal file
+lipo {{path/to/binary}} -detailed_info##Display detailed information about a universal file
+lipo {{path/to/binary}} -thin {{arm64e}} -output {{path/to/binary.arm64e}}##Extract a single-architecture file from a universal file
+lldb "{{executable}}"##Debug an executable
+lldb -p {{pid}}##Attach `lldb` to a running process with a given PID
+lldb -w -n "{{process_name}}"##Wait for a new process to launch with a given name, and attach to it
+locate "{{pattern}}"##Look for pattern in the database. Note the database is recomputed periodically (usually weekly or daily)
+locate */{{filename}}##Look for a file by its exact filename (a pattern containing no globbing characters is interpreted as `*pattern*`)
+sudo /usr/libexec/locate.updatedb##Recompute the database. You need to do it if you want to find recently added files
+log stream##Stream live system logs
+log stream --process {{process_id}}##Stream logs sent to `syslog` from the process with a specific PID
+log show --predicate "process == '{{process_name}}'"##Show logs sent to syslog from a process with a specific name
+sudo log collect --last {{1h}} --output {{path/to/file.logarchive}}##Export all logs to disk for the past hour
+look {{prefix}} {{file}}##Look for lines which begins with the given prefix
+look --ignore-case {{prefix}} {{file}}##Look for lines ignoring case
+m battery status##Get the battery status
+m bluetooth off##Turn off Bluetooth
+m disk filesystems##List available filesystems for formatting
+m dock autohide YES##Enable Dock's auto hide feature
+m firewall disable##Disable the firewall
+machine##Print CPU architecture
+mas signin "{{user@example.com}}"##Sign into the Mac App Store for the first time
+mas list##Show all installed applications and their product identifiers
+mas search "{{application}}" --price##Search for an application, displaying the price alongside the results
+mas install {{product_identifier}}##Install or update an application
+mas upgrade##Install all pending updates
+md5 {{filename}}##Calculate the MD5 checksum for a file
+md5 {{filename1}} {{filename2}}##Calculate MD5 checksums for multiple files
+md5 -q {{filename}}##Output only the md5 checksum (no filename)
+md5 -s "{{string}}"##Print a checksum of the given string
+mdfind -name {{file}}##Find a file by its name
+mdfind "{{query}}"##Find a file by its content
+mdfind -onlyin {{directory}} "{{query}}"##Find a file containing a string, in a given directory
+mdls {{path/to/file}}##Display the list of metadata attributes for file
+mdls -name {{attribute}} {{path/to/file}}##Display a specific metadata attribute
+mdutil -s {{/}}##Show the indexing status of the startup volume
+mdutil -i {{on|off}} {{path/to/volume}}##Turn on/off the Spotlight indexing for a given volume
+mdutil -a -i {{on|off}}##Turn on/off indexing for all volumes
+mdutil -E {{path/to/volume}}##Erase the metadata stores and restart the indexing process
+mkfile -n {{15k}} {{filename}}##Create an empty file of 15 kilobytes
+mkfile -n {{size}}{{b|k|m|g}} {{filename}}##Create a file of a given size and unit (bytes, KB, MB, GB)
+mkfile -n {{4m}} {{first_filename}} {{second_filename}}##Create two files of 4 megabytes each
+nettop##Monitor TCP and UDP sockets from all interfaces
+nettop -m {{tcp}} -t {{loopback}}##Monitor TCP sockets from Loopback interfaces
+nettop -p "{{process_id|process_name}}"##Monitor a specific process
+nettop -P##Display a per-process summary
+nettop -l {{10}}##Print 10 samples of network information
+nettop -d -s {{5}}##Monitor changes every 5 seconds
+h##While running nettop, list interactive commands
+nettop -h##Display help
+networkQuality##Test the network quality for the default interface
+networkQuality -s##Test the upload and download speeds sequentially instead of in parallel
+networkQuality -I {{en0}}##Test a specified network interface
+networkQuality -v##Test the network quality with verbose output
+networksetup -listallnetworkservices##List available network service providers (Ethernet, Wi-Fi, Bluetooth, etc)
+networksetup -getinfo "{{Wi-Fi}}"##Show network settings for a particular networking device
+networksetup -getairportnetwork {{en0}}##Get currently connected Wi-Fi network name (Wi-Fi device usually en0 or en1)
+networksetup -setairportnetwork {{en0}} {{Airport Network SSID}} {{password}}##Connect to a particular Wi-Fi network
+nfcd##Start the daemon
+notifyd##Start the daemon
+notifyd -d##Log debug messages to the default log file (`/var/log/notifyd.log`)
+notifyd -d -log_file {{path/to/log}}##Log debug messages to an alternate log file
+nvram -p##[p]rint all the variables stored in the NVRAM
+nvram -xp##[p]rint all the variables stored in the NVRAM using [x]ML format
+sudo nvram {{name}}="{{value}}"##Modify the value of a firmware variable
+sudo nvram -d {{name}}##[d]elete a firmware variable
+sudo nvram -c##[c]lear all the firmware variables
+sudo nvram -xf {{path/to/file.xml}}##Set a firmware variable from a specific [x]ML [f]ile
+ocspd##Start the daemon
+open {{file.ext}}##Open a file with the associated application
+open -a "{{Application}}"##Run a graphical macOS application
+open -b {{com.domain.application}}##Run a graphical macOS app based on the bundle identifier (refer to `osascript` for an easy way to get this)
+open .##Open the current directory in Finder
+open -R {{path/to/file}}##Reveal a file in Finder
+open {{*.ext}}##Open all the files of a given extension in the current directory with the associated application
+sudo opensnoop##Print all file opens as they occur
+sudo opensnoop -n "{{process_name}}"##Track all file opens by a process by name
+sudo opensnoop -p {{PID}}##Track all file opens by a process by PID
+sudo opensnoop -f {{path/to/file}}##Track which processes open a specified file
+osascript -e "{{say 'Hello world'}}"##Run an AppleScript command
+osascript -e "{{say 'Hello'}}" -e "{{say 'world'}}"##Run multiple AppleScript commands
+osascript {{path/to/apple.scpt}}##Run a compiled (`*.scpt`), bundled (`*.scptd`), or plaintext (`*.applescript`) AppleScript file
+osascript -e 'id of app "{{Application}}"'##Get the bundle identifier of an application (useful for `open -b`)
+osascript -l JavaScript -e "{{console.log('Hello world');}}"##Run a JavaScript command
+osascript -l JavaScript {{path/to/script.js}}##Run a JavaScript file
+pbcopy < {{file}}##Place the contents of a file in the clipboard
+find . -type t -name "*.png" | pbcopy##Place the results of a command in the clipboard
+pbpaste > {{file}}##Write the contents of the clipboard to a file
+pbpaste | grep foo##Use the contents of the clipboard as input to a command
+photoanalysisd##Start the daemon
+photolibraryd##Start the daemon
+ping "{{hostname}}"##Ping the specified host
+ping -c {{count}} "{{host}}"##Ping a host a specific number of times
+ping -i {{seconds}} "{{host}}"##Ping `host`, specifying the interval in `seconds` between requests (default is 1 second)
+ping -n "{{host}}"##Ping `host` without trying to lookup symbolic names for addresses
+ping -a "{{host}}"##Ping `host` and ring the bell when a packet is received (if your terminal supports it)
+ping --apple-time "{{host}}"##Ping `host` and prints the time a packet was received (this option is an Apple addition)
+pkgutil --pkgs##List package IDs for all installed packages
+pkgutil --check-signature {{path/to/filename.pkg}}##Verify cryptographic signatures of a package file
+pkgutil --files {{com.microsoft.Word}}##List all the files for an installed package given its ID
+pkgutil --expand-full {{path/to/filename.pkg}} {{path/to/directory}}##Extract the contents of a package file into a directory
+plutil -p {{file1.plist file2.plist ...}}##Display the contents of one or more plist files in human-readable format
+plutil -convert xml1 {{file1.plist file2.plist ...}}##Convert one or more plist files to XML format, overwriting the original files in-place
+plutil -convert binary1 {{file1.plist file2.plist ...}}##Convert one or more plist files to binary format, overwriting the original files in-place
+plutil -convert {{xml1|binary1|json|swift|objc}} {{path/to/file.plist}} -o {{path/to/new_file.plist}}##Convert a plist file to a different format, writing to a new file
+plutil -convert {{xml1|binary1|json|swift|objc}} {{path/to/file.plist}} -o -##Convert a plist file to a different format, writing to stdout
+pmset -g##Display the current power management settings
+pmset -g batt##Display the current power source and battery levels
+pmset displaysleepnow##Put display to sleep immediately
+sudo pmset -c displaysleep 0##Set display to never sleep when on charger power
+sudo pmset -b displaysleep 15##Set display to sleep after 15 minutes when on battery power
+sudo pmset repeat wake MTWRF 09:00:00##Schedule computer to automatically wake up every weekday at 9 AM
+sudo pmset -a displaysleep 10 disksleep 10 sleep 30 womp 1##Restore to system defaults
+pod init##Create a Podfile for the current project with the default contents
+pod install##Download and install all pods defined in the Podfile (that haven't been installed before)
+pod list##List all available pods
+pod outdated##Show the outdated pods (of those currently installed)
+pod update##Update all currently installed pods to their newest version
+pod update {{pod_name}}##Update a specific (previously installed) pod to its newest version
+pod deintegrate {{xcode_project}}##Remove CocoaPods from a Xcode project
+port search {{search_term}}##Search for a package
+sudo port install {{package_name}}##Install a package
+port installed##List installed packages
+sudo port selfupdate##Update port and fetch the latest list of available packages
+sudo port upgrade outdated##Upgrade outdated packages
+sudo port uninstall inactive##Remove old versions of installed packages
+qlmanage -p {{filename}} {{filename2}}##Display QuickLook for one or multiple files
+qlmanage {{*.jpg}} -t -s {{300}} {{path/to/directory}}##Compute 300px wide PNG thumbnails of all JPEGs in the current directory and put them in a directory
+qlmanage -r##Reset QuickLook
+readlink {{path/to/symlink}}##Print the absolute path which the symlink points to
+sudo reboot##Reboot immediately
+sudo reboot -q##Reboot immediately without gracefully shutting down
+rename 's/{{from}}/{{to}}/' {{*.txt}}##Replace `from` with `to` in the filenames of the specified files
+sudo route add "{{destination_ip_address}}" "{{gateway_address}}"##Add a route to a destination through a gateway
+sudo route add "{{subnet_ip_address}}/24" "{{gateway_address}}"##Add a route to a /24 subnet through a gateway
+sudo route -t add "{{destination_ip_address}}/24" "{{gateway_address}}"##Run in test mode (does not do anything, just print)
+sudo route flush##Remove all routes
+sudo route delete "{{destination_ip_address}}/24"##Delete a specific route
+sudo route get "{{destination}}"##Lookup and display the route for a destination (hostname or IP address)
+SafeEjectGPU Eject##Eject all GPUs
+SafeEjectGPU gpus##List all GPUs attached
+SafeEjectGPU gpuid {{GPU_ID}} apps##List apps using a GPU
+SafeEjectGPU gpuid {{GPU_ID}} status##Get the status of a GPU
+SafeEjectGPU gpuid {{GPU_ID}} Eject##Eject a GPU
+SafeEjectGPU gpuid {{GPU_ID}} LaunchOnGPU {{path/to/App.app}}##Launch an app on a GPU
+say "{{I like to ride my bike.}}"##Say a phrase aloud
+say --input-file={{filename.txt}}##Read a file aloud
+say --voice={{voice}} --rate={{words_per_minute}} "{{I'm sorry Dave, I can't let you do that.}}"##Say a phrase with a custom voice and speech rate
+say --voice="?"##List the available voices
+say --output-file={{filename.aiff}} "{{Here's to the Crazy Ones.}}"##Create an audio file of the spoken text
+screencapture {{path/to/file.png}}##Take a screenshot and save it to a file
+screencapture -C {{path/to/file.png}}##Take a screenshot including the mouse cursor
+screencapture -P##Take a screenshot and open it in Preview, instead of saving
+screencapture -i {{path/to/file.png}}##Take a screenshot of a selected rectangular area
+screencapture -T {{seconds}} {{path/to/file.png}}##Take a screenshot after a delay
+screencapture -v {{path/to/file.mp4}}##Make a screen recording and save it to a file
+scutil --dns##Display DNS Configuration
+scutil --proxy##Display proxy configuration
+scutil --get ComputerName##Get computer name
+sudo scutil --set ComputerName {{computer_name}}##Set computer name
+scutil --get HostName##Get hostname
+scutil --set HostName {{hostname}}##Set hostname
+sdef {{/Applications/XCode.app}}##Print the scripting definitions of the given application
+secd##Start the daemon
+security list-keychains##List the available keychains
+security delete-keychain {{path}}##Delete a specific keychain
+security create-keychain -p {{password}} {{keychain.name}}##Create a keychain
+security set-identity-preference -s {{URL|hostname|service}} -c "{{common_name}}" {{path/to/file.keychain}}##Set a certificate to use with a website or [s]ervice by its [c]ommon name (fails if several certificates with the same common name exist)
+security add-certificates -k {{keychain.name}} {{path/to/file.pem}}##Add a certificate from file to a [k]eychain (if -k isn't specified, the default keychain is used)
+securityd##Start the daemon
+sed 's/{{find}}/{{replace}}/' {{filename}}##Replace the first occurrence of a string in a file, and print the result
+sed -E 's/{{regular_expression}}/{{replace}}/g' {{filename}}##Replace all occurrences of an extended regular expression in a file
+sed -i '' 's/{{find}}/{{replace}}/g' {{filename}}##Replace all occurrences of a string [i]n a file, overwriting the file (i.e. in-place)
+sed '/{{line_pattern}}/s/{{find}}/{{replace}}/' {{filename}}##Replace only on lines matching the line pattern
+sed -n '{{line_number}},/^$/p' {{filename}}##Print only text between n-th line till the next empty line
+sed -e 's/{{find}}/{{replace}}/' -e 's/{{find}}/{{replace}}/' {{filename}}##Apply multiple find-replace expressions to a file
+sed 's#{{find}}#{{replace}}#' {{filename}}##Replace separator `/` by any other character not used in the find or replace patterns, e.g. `#`
+sed -i '' '{{line_number}}d' {{filename}}##[d]elete the line at the specific line number [i]n a file, overwriting the file
+shortcuts run "{{Count holidays}}"##Run the specified shortcut (`Count holidays`)
+shortcuts list##Print all shortcuts
+shortcuts list --folders##Print all shortcut folders
+shortcuts view "{{Count holidays}}"##Open the specified shortcut (`Count holidays`) in the Shortcuts editor
+shuf {{filename}}##Randomize the order of lines in a file and output the result
+shuf --head-count={{5}} {{filename}}##Only output the first 5 entries of the result
+shuf {{filename}} --output={{output_filename}}##Write output to another file
+shuf --input-range={{1-10}}##Generate random numbers in range 1-10
+shutdown -h now##Power off (halt) immediately
+shutdown -s now##Sleep immediately
+shutdown -r now##Reboot immediately
+shutdown -r "+{{5}}"##Reboot in 5 minutes
+shutdown -h {{1300}}##Power off (halt) at 100 pm (Uses 24h clock)
+shutdown -r {{4205101130}}##Reboot on May 10th 2042 at 1130 am (Input format YYMMDDHHMM)
+sips --out {{path/to/out_dir}}##Specify an output directory so that originals do not get modified
+sips --resampleHeightWidth {{1920}} {{300}} {{image.ext}}##Resample image at specified size, Image aspect ratio may be altered
+sips --resampleHeightWidthMax {{1920}} {{300}} {{image.ext}}##Resample image so height and width aren't greater than specified size (notice the capital Z)
+sips --resampleWidth {{960}} {{path/to/images}}##Resample all images in a directory to fit a width of 960px (honoring aspect ratio)
+sips --matchTo "/System/Library/ColorSync/Profiles/Generic RGB Profile.icc" {{path/to/image.ext}} {{path/to/out_dir}}##Convert an image from CMYK to RGB
+sips --deleteProperty profile --deleteColorManagementProperties {{path/to/image.ext}}##Remove ColorSync ICC profile from an image
+sntpd##Start the daemon
+sntpd -L##Overwrite existing state with the local clock (stratum 1), for running a master/primary server, without synchronizing with another (higher stratum) server
+sntpd -z {{path/to/state.bin}}##Use a custom file for the SNTP state
+softwareupdate --list##List all available updates
+softwareupdate --install --all##Download and install all updates
+softwareupdate --install --req##Download and install all recommended updates
+softwareupdate --install {{update_name}}##Download and install a specific app
+spctl --master-disable##Turn off Gatekeeper
+spctl --add --label {{rule_name}} {{path/to/file}}##Add a rule to allow an application to run (labeling of rule is optional)
+spctl --master-enable##Turn on Gatekeeper
+spctl --list##List all rules on the system
+split -l {{10}} {{filename}}##Split a file, each split having 10 lines (except the last split)
+split -p {{cat|^[dh]og}} {{filename}}##Split a file by a regular expression. The matching line will be the first line of the next output file
+split -b {{512}} {{filename}}##Split a file with 512 bytes in each split (except the last split; use 512k for kilobytes and 512m for megabytes)
+spotify play {{song_name}}##Find a song by name and play it
+spotify play list {{playlist_name}}##Find a playlist by name and play it
+spotify pause##Pause (or resume) playback
+spotify next##Skip to the next song in a playlist
+spotify vol {{up|down|value}}##Change volume
+spotify status##Show the playback status and song details
+stat {{file}}##Show file properties such as size, permissions, creation and access dates among others
+stat -x {{file}}##Same as above but verbose (more similar to Linux's `stat`)
+stat -f %Mp%Lp {{file}}##Show only octal file permissions
+stat -f "%Su %Sg" {{file}}##Show owner and group of the file
+stat -f "%z %N" {{file}}##Show the size of the file in bytes
+sw_vers##Print all available information (OS name, version number, and build)
+sw_vers -productVersion##Print only the version number of the operating system
+sw_vers -buildVersion##Print only the build identifier
+sysctl -a##Show all available variables and their values
+sysctl -n hw.model##Show Apple model identifier
+sysctl -n machdep.cpu.brand_string##Show CPU model
+sysctl -n machdep.cpu.features##Show available CPU features (MMX, SSE, SSE2, SSE3, AES, etc)
+sysctl -w {{section.tunable}}={{value}}##Set a changeable kernel state variable
+systemsetup -setremotelogin on##Enable remote login (SSH)
+systemsetup -settimezone "{{US/Pacific}}" -setnetworktimeserver {{us.pool.ntp.org}} -setusingnetworktime on##Specify timezone, NTP Server and enable network time
+systemsetup -setsleep off -setrestartpowerfailure on -setrestartfreeze on##Make the machine never sleep and automatically restart on power failure or kernel panic
+systemsetup -liststartupdisks##List valid startup disks
+systemsetup -setstartupdisk {{path}}##Specify a new startup disk
+system_profiler -xml > MyReport.spx##Display a full system profiler report which can be opened by System Profiler.app
+system_profiler SPHardwareDataType##Display a hardware overview (Model, CPU, Memory, Serial, etc)
+system_profiler SPHardwareDataType|grep "Serial Number (system)" | awk '{ print $4 }'##Print the system serial number
+tail -n {{count}} {{path/to/file}}##Show last 'count' lines in file
+tail -n +{{count}} {{path/to/file}}##Print a file from a specific line number
+tail -c {{count}} {{path/to/file}}##Print a specific count of bytes from the end of a given file
+tail -f {{path/to/file}}##Print the last lines of a given file and keep reading file until `Ctrl + C`
+tail -F {{path/to/file}}##Keep reading file until `Ctrl + C`, even if the file is inaccessible
+tail -n {{count}} -s {{seconds}} -f {{path/to/file}}##Show last 'count' lines in 'file' and refresh every 'seconds' seconds
+textutil -info {{foo.rtf}}##Display information about `foo.rtf`
+textutil -convert {{html}} {{foo.rtf}}##Convert `foo.rtf` into `foo.html`
+textutil {{foo.rtf}} -convert {{txt}}##Convert rich text to normal text
+textutil -convert {{rtf}} -font {{Times}} -fontsize {{10}} {{foo.txt}}##Convert `foo.txt` into `foo.rtf`, using Times 10 for the font
+textutil -cat {{html}} -title "Several Files" -output {{index.html}} *.rtf##Load all RTF files in the current directory, concatenates their contents, and writes the result out as `index.html` with the HTML title set to "Several Files"
+timed##Start the daemon
+sudo tmutil setdestination {{path/to/disk_mount_point}}##Set an HFS+ drive as the backup destination
+sudo tmutil setdestination "{{protocol://user[:password]@host/share}}"##Set an APF share or SMB share as the backup destination
+sudo tmutil setdestination -a {{destination}}##Append the given destination to the list of destinations
+sudo tmutil enable##Enable automatic backups
+sudo tmutil disable##Disable automatic backups
+sudo tmutil startbackup##Start a backup, if one is not running already, and release control of the shell
+sudo tmutil startbackup -b##Start a backup and block until the backup is finished
+sudo tmutil stopbackup##Stop a backup
+top##Start top, all options are available in the interface
+top -o mem##Start top sorting processes by internal memory size (default order process ID)
+top -o cpu -O time##Start top sorting processes first by CPU, then by running time
+top -user {{user_name}}##Start top displaying only processes owned by given user
+?##Get help about interactive commands
+uname##Print kernel name
+uname -mp##Print system architecture and processor information
+uname -srv##Print kernel name, kernel release and kernel version
+uname -n##Print system hostname
+uname -a##Print all available system information
+universalaccessd##Start the daemon
+uptime##Print current time, uptime, number of logged-in users and other information
+usernoted##Start the daemon
+uuidgen##Generate a UUID string
+valet start##Start the valet daemon
+valet park##Register the current working directory as a path that Valet should search for sites
+valet paths##View 'parked' paths
+valet link app-name##Serve a single site instead of an entire directory
+valet share##Share a project via an Ngrok tunnel
+vpnd##Start the daemon
+vpnd -x##Run the daemon in the foreground
+vpnd -d##Run the daemon in the foreground and print logs to the terminal
+vpnd -n##Run the daemon in the foreground, print logs to the terminal, and quit after validating arguments
+vpnd -h##Print usage summary and exit
+vpnd -i {{server_id}}##Run the daemon for a specific server configuration
+w##Show logged-in users info
+w -h##Show logged-in users info without a header
+w -i##Show info about logged-in users, sorted by their idle time
+wacaw {{filename}}##Take a picture from webcam
+wacaw --video {{filename}} --duration {{duration_in_seconds}}##Record a video
+wacaw --width {{width}} --height {{height}} {{filename}}##Take a picture with custom resolution
+wacaw --to-clipboard##Copy image just taken to clipboard
+wacaw --list-devices##List the devices available
+wc -l {{path/to/file}}##Count lines in file
+wc -w {{path/to/file}}##Count words in file
+wc -c {{path/to/file}}##Count characters (bytes) in file
+wc -m {{path/to/file}}##Count characters in file (taking multi-byte character sets into account)
+{{find .}} | wc##Use standard input to count lines, words and characters (bytes) in that order
+whatis {{keyword}}##Search for information about keyword
+whatis {{first_keyword}} {{second_keyword}}##Search for information about multiple keywords
+whence "{{command}}"##Interpret {{command}}, with expansion if defined as an `alias` (similar to the `command -v` builtin)
+whence -v "{{command}}"##Display type of {{command}}, with location if defined as a function, or binary (equivalent to the `type` and `command -V` builtins)
+whence -c "{{command}}"##Same as above, except display content of shell functions instead of location (equivalent to `which` builtin)
+whence -ca "{{command}}"##Same as above, but show all occurrences on command path (equivalent to the `where` builtin)
+whence -p "{{command}}"##Search only the `PATH` for {{command}}, ignoring builtins, aliases or shell functions (equivalent to the `where` command)
+wifi-password##Get the password for the Wi-Fi you are currently logged onto
+wifi-password {{ssid}}##Get the password for the Wi-Fi with a specific SSID
+wifi-password -q##Print only the password as output
+xattr -l {{file}}##List keyvalue extended attributes for a given file
+xattr -w {{attribute_key}} {{attribute_value}} {{file}}##Write an attribute for a given file
+xattr -d {{com.apple.quarantine}} {{file}}##Delete an attribute from a given file
+xattr -c {{file}}##Delete all extended attributes from a given file
+xattr -rd {{attribute_key}} {{directory}}##Recursively delete an attribute in a given directory
+xcode-select --install##Install Xcode's command-line tools
+xcode-select --switch {{path/to/Xcode.app/Contents/Developer}}##Select a given path as the active developer directory
+xcode-select --switch {{path/to/Xcode.app}}##Select a given Xcode instance and use its developer directory as the active one
+xcode-select --print-path##Print the currently selected developer directory
+sudo xcode-select --reset##Discard any user-specified developer directory so that it will be found via the default search mechanism
+xcodebuild -workspace {{workspace_name.workspace}} -scheme {{scheme_name}} -configuration {{configuration_name}} clean build SYMROOT={{SYMROOT_path}}##Build workspace
+xcodebuild -target {{target_name}} -configuration {{configuration_name}} clean build SYMROOT={{SYMROOT_path}}##Build project
+xcodebuild -showsdks##Show SDKs
+xcrun {{tool}} {{arguments}}##Find and run a tool from the active developer directory
+xcrun {{tool}} {{arguments}} --verbose##Show verbose output
+xcrun --sdk {{sdk_name}}##Find a tool for a given SDK
+xcrun --toolchain {{name}}##Find a tool for a given toolchain
+xcrun --help##Display help
+xcrun --version##Display version
+xctool -project {{YourProject.xcodeproj}} -scheme {{YourScheme}} build##Build a single project without any workspace
+xctool -workspace {{YourWorkspace.xcworkspace}} -scheme {{YourScheme}} build##Build a project that is part of a workspace
+xctool -workspace {{YourWorkspace.xcworkspace}} -scheme {{YourScheme}} clean build test##Clean, build and execute all the tests
+xed {{file1}}##Open file in Xcode
+xed --create {{filename1}}##Open file(s) in Xcode, create if it doesn't exist
+xed --line 75 {{filename}}##Open a file in Xcode and jump to line number 75
+xip --expand {{path/to/file.xip}}##Expand the archive into the current working directory
+xml2man {{path/to/command.mxml}}##Compile an MPGL file to a viewable man page
+xml2man {{path/to/service.mxml}} {{path/to/service.7}}##Compile an MPGL file to a specific output file
+xml2man -f {{path/to/function.mxml}} {{path/to/function.3}}##Compile an MPGL file to a specific output file, overwriting if it already exists
+xsltproc --output {{output.html}} {{stylesheet.xslt}} {{xmlfile.xml}}##Transform an XML file with a specific XSLT stylesheet
+xsltproc --output {{output.html}} --stringparam "{{name}}" "{{value}}" {{stylesheet.xslt}} {{xmlfile.xml}}##Pass a value to a parameter in the stylesheet
+yaa archive -d {{path/to/directory}} -o {{path/to/output.yaa}}##Create an archive from a directory
+yaa archive -i {{path/to/file}} -o {{path/to/output.yaa}}##Create an archive from a file
+yaa extract -i {{path/to/archive.yaa}}##Extract an archive to the current directory
+yaa list -i {{path/to/archive.yaa}}##List the contents of an archive
+yaa archive -a {{algorithm}} -d {{path/to/directory}} -o {{path/to/output.yaa}}##Create an archive with a specific compression algorithm
+yaa archive -b {{8m}} -d {{path/to/directory}} -o {{path/to/output.yaa}}##Create an archive with an 8 MB block size
+yabai -m config layout {{bsp}}##Set the layout to bsp
+yabai -m config window_gap {{10}}##Set the window gap to 10pt
+yabai -m config window_opacity on##Enable opacity
+yabai -m config window_shadow off##Disable window shadow
+yabai -m config status_bar on##Enable status bar
