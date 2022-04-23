@@ -50,7 +50,7 @@ def cmd_get(args):
 def cmd_remove(args):
     core.remove_command(args.search)
 
-def cmd_update():
+def cmd_update(args):
     core.update_cache()
 
 def marker_sourced():

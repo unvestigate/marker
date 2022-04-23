@@ -6,6 +6,7 @@ from . import readchar
 from . import command
 from . import renderer
 from .filter import filter_commands
+from . import tldr
 
 from sys import version_info, platform
 
@@ -13,6 +14,10 @@ if version_info[0] == 2:
     keyboard_input = raw_input
 else:
     keyboard_input = input
+
+def update_cache():
+    tldr.update()
+
 
 def get_os():
     if platform.lower() == 'darwin':
