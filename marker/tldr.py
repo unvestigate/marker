@@ -1,7 +1,7 @@
 import subprocess
 from zipfile import ZipFile
 import glob
-
+import os
 
 def download():
     # https://tldr.sh/assets/tldr.zip
@@ -35,7 +35,8 @@ def process(path: str):
                     lines.append(temp)
         with open(f"{path}.txt", "w+") as file:
             file.writelines(lines)
-    subprocess.run(["cp", f"{path}.txt", "tldr"])
+    tldr_path = os.path.join(os.getenv('MARKER_HOME'), 'tldr')
+    subprocess.run(["cp", f"{path}.txt", tldr_path])
     subprocess.run(["rm", f"{path}.txt"])
 
 def cleanup():
@@ -48,3 +49,4 @@ def update():
     process("linux")
     process("osx")
     cleanup()
+    print("Update completed")
