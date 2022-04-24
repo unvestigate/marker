@@ -4,8 +4,8 @@ import glob
 
 
 def download():
-    # https://raw.githubusercontent.com/tldr-pages/tldr-pages.github.io/master/assets/tldr.zip
-    subprocess.run(["curl", "-sO", "https://tldr.sh/assets/tldr.zip"])
+    # https://tldr.sh/assets/tldr.zip
+    subprocess.run(["curl", "-sO", "https://raw.githubusercontent.com/tldr-pages/tldr-pages.github.io/master/assets/tldr.zip"])
     with ZipFile("tldr.zip", "r") as zipObj:
        files = zipObj.namelist()
        for file in files:
