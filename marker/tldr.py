@@ -73,8 +73,6 @@ def process(path: str):
     old_lines += aux
     with open(f"{tldr_path}/{path}.txt", "w+") as file:
         file.writelines(sorted(old_lines))
-    subprocess.run(["cp", f"{path}.txt", tldr_path])
-    subprocess.run(["rm", f"{path}.txt"])
 
 
 def cleanup():
