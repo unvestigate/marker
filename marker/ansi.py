@@ -6,7 +6,7 @@ ERASE_SCREEN = "\x1b[J"
 ERASE_LINE = "\x1b[2K"
 FOREGROUND_BLACK = "\x1b[30m"
 BACKGROUND_WHITE = "\x1b[47m"
-FOREGROUND_GREY = "\x1b[34m"
+FOREGROUND_GREEN = "\x1b[32m"
 
 def _CURSOR_COLUMN(pos):
     return "\x1b["+str(pos)+"G"
@@ -18,31 +18,30 @@ def _CURSOR_PREVIOUS_LINES(number):
 def get_formattings(text):
     if CLEAR_FORMATTING in text:
         return get_formattings(text[text.index(CLEAR_FORMATTING)+len(CLEAR_FORMATTING):])
-    return ''.join([s for s in [BOLD, FOREGROUND_GREY, FOREGROUND_BLACK, BACKGROUND_WHITE] if s in text])
+    return ''.join([s for s in [BOLD, FOREGROUND_GREEN, FOREGROUND_BLACK, BACKGROUND_WHITE] if s in text])
 
 def select_text(text):
     return  (FOREGROUND_BLACK +
-            BACKGROUND_WHITE + 
+            BACKGROUND_WHITE +
             text.replace(
                 CLEAR_FORMATTING,
-                CLEAR_FORMATTING + FOREGROUND_BLACK + BACKGROUND_WHITE)+
+                CLEAR_FORMATTING + FOREGROUND_BLACK + BACKGROUND_WHITE).replace(FOREGROUND_GREEN, "") +
             CLEAR_FORMATTING +
             get_formattings(text))
 
-
 def bold_text(text):
-    return  (BOLD + 
+    return  (BOLD +
             text.replace(
                 CLEAR_FORMATTING,
                 CLEAR_FORMATTING + BOLD)+
             CLEAR_FORMATTING +
             get_formattings(text))
 
-def grey_text(text):
-    return  (FOREGROUND_GREY + 
+def green_text(text):
+    return  (FOREGROUND_GREEN +
             text.replace(
                 CLEAR_FORMATTING,
-                CLEAR_FORMATTING + FOREGROUND_GREY)+
+                CLEAR_FORMATTING + FOREGROUND_GREEN)+
                 CLEAR_FORMATTING +
                 get_formattings(text))
 

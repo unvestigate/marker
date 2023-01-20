@@ -37,7 +37,7 @@ class Command(object):
 
     def __repr__(self):
         if self.alias and self.alias != self.cmd:
-            return self.cmd+" "+ansi.grey_text(self.alias)
+            return self.cmd+" "+ansi.green_text(self.alias)
         else:
             return self.cmd
 
